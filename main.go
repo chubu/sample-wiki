@@ -80,7 +80,7 @@ func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
 
 func init() {
 	for _, tmpl := range []string{"edit", "view"} {
-		t := template.Must(template.ParseFiles(tmpl + ".html"))
+		t := template.Must(template.ParseFiles("tmpl/" + tmpl + ".html"))
 		templates[tmpl] = t
 	}
 }
